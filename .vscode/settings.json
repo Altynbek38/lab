@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "random": "cpp",
+        "cmath": "cpp",
+        "complex": "cpp",
+        "12,сзз": "cpp",
+        "bitset": "cpp",
+        "ostream": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}
