@@ -2,13 +2,21 @@
 using namespace std;
 int main(){
     string s;
-    cin >> s;
-    s.erase(remove(s.begin(), s.end(), ' '), s.end());
-    long long n = s.size() / 2;
-
+    getline(cin, s);
+    string h;
+    int n = s.size();
     for(int i = 0; i < n; i++){
-        if(s[i] != s[n - i - 1]){
-            cout << "no";
+        if(s[i] != ' '){
+            h += s[i];
+        }
+    }
+
+
+    int m = h.size();
+
+    for(int i = 0; i < m / 2; i++){
+        if(h[i] != h[m - 1 - i]){
+            cout  << "no";
             return 0;
         }
     }

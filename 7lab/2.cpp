@@ -1,19 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-long long binary(long long n){
+void binary(int n){
     if(n == 0){
-        return 0;
+        return;
     }
-    else
-        return n % 2 + 10 * binary(n / 2);
+    
+    binary(n / 2);
+    cout << n % 2;
+    
 }
 
 int main(){
     
-    long long n;
+    int n;
     cin >> n;
+    binary(n);
 
-    cout <<binary(n);
     return 0;
 }

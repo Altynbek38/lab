@@ -1,15 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
-int sum(int n){
-    if(n == 0){
-        return 0;
+int sum(string s, int a, int b){
+    if(a == s.size()){
+        return b;
     }
-    else
-        return n % 10 + sum(n / 10);
+    else 
+        b = b + (s[a] - '0');
+        return sum(s, a + 1,b);
 }
 int main(){
-    long long n;
-    cin >> n;
-    cout << sum(n);
+    string s;
+    cin >> s;
+    int a = 0, b = 0;
+    cout << sum(s, a, b);
     return 0;
 }

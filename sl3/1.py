@@ -1,0 +1,5 @@
+print("hello world")
+print(3 + 4)
+name = input("What is your name?")
+if name == "Altynbek": print("Hello,",name)
+else: print("Fuck you,", name)

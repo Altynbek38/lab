@@ -1,13 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main(){
-    int n, sum = 0;
-    while(cin >> n){
-        if(n == 0){
-            break;
-            sum += n;
-        }
+int NotZeroSum(int n, int m){
+    cin >> n;
+    if(n == 0){
+        return m;
     }
-    cout << sum;
+    else    
+        return NotZeroSum(n, m + n); 
+}
+int main(){
+    int n, m = 0;
+    cout << NotZeroSum(n, m);
     return 0;
 }

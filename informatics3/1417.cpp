@@ -4,13 +4,18 @@ int main(){
     string s;
     int n, m;
     cin >> s >> n >> m; 
-    char temp;
+    
+    for(int i = 0; i < n - 1; i++){
+        cout << s[i];
+    }
 
-    temp = s[n - 1];
-    s[n - 1] = s[m - 1];
-    s[m - 1] = temp;
+    for(int i = m - 1; i >= n - 1; i--){
+        cout << s[i];
+    }
 
-    cout << s;
+    for(int i = m; i < s.size(); i++){
+        cout << s[i];
+    }
 
     return 0;
 }
